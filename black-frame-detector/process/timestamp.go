@@ -68,5 +68,4 @@ func GetVideoInfo(filename string) (*VideoInfo, error) {
 	}
 
 	return &videoInfo, nil
-
 }

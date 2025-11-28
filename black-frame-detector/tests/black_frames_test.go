@@ -15,7 +15,7 @@ func TestGetVideoTimestamp(t *testing.T) {
 }
 
 func TestDurationToTimestamp(t *testing.T) {
-	info, err := process.GetVideoInfo("./../output_red.mp4")
+	info, err := process.GetVideoInfo("./../output_black.mp4")
 	require.NoError(t, err)
 	require.NotEmpty(t, info)
 
@@ -24,4 +24,12 @@ func TestDurationToTimestamp(t *testing.T) {
 	require.NotEmpty(t, tm)
 
 	fmt.Println(tm)
+}
+
+func TestGetBlackFramesTimestamps(t *testing.T) {
+	output, err := process.GetVideoMetadata("./../black_filter3.mp4")
+	require.NoError(t, err)
+	require.NotEmpty(t, output)
+
+	fmt.Println(string(output))
 }

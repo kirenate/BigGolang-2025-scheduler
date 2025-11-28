@@ -26,8 +26,6 @@ func main() {
 		panic("Wrong output path, example: your/output/path/filename.mp4\n\nThis script only works with mp4 and mov")
 	}
 
-	//file := ffmpeg.Input(inputPath)
-
 }
 
 // -i{inputPath}
